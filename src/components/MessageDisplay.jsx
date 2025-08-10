@@ -1,16 +1,22 @@
-export function MessageDisplay() {
+import { useState } from "react";
+
+export function MessageDisplay({ author, subject, message }) {
   return (
     <div className="message-container">
       <div className="message-item">
         <div className="message-meta">
-          <div className="message-subject"></div>
-          <div className="message-author">Nukri Jijavadze</div>
+          <div
+            className="message-subject"
+            style={{
+              backgroundColor:
+                subject === "software-issues" ? "red" : "blue",
+            }}
+          ></div>
+          <div className="message-author">{author || "Anonymous"}</div>
         </div>
 
         <p className="message-content">
-          Hello, I am having a problem installing the latest update. The program
-          stops responding a few minutes after launch. Please advise how I can
-          resolve this issue.
+          {message || "No message yet..."}
         </p>
       </div>
     </div>
