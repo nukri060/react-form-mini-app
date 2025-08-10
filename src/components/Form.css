@@ -1,0 +1,22 @@
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+}
+
+/* input,
+textarea,
+select,
+button {
+  width: 150px;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+} */
+
+.input-wrapper label{
+  display: block;
+  margin: 10px 0 20px 0;
+}
